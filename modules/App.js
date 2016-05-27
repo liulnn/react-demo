@@ -17,6 +17,15 @@ const muiTheme = getMuiTheme({
 
 
 export default React.createClass({
+    childContextTypes: {
+        muiTheme: React.PropTypes.object
+    },
+
+    getChildContext: function() {
+        return {
+            muiTheme: muiTheme
+        };
+    },
     render() {
         return (
             <div>
